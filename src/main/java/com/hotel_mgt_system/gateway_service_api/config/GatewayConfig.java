@@ -11,7 +11,7 @@ public class GatewayConfig {
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("hotel-management-system", r -> r.path("/hotel-management/**")
-                        .uri("http://localhost:8082"))
+                        .uri("http://localhost:8081"))
                 .build();
     }
 }
