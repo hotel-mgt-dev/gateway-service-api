@@ -29,7 +29,7 @@ public class SecurityConfiguration {
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity httpSecurity) {
         httpSecurity.csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(autherize -> autherize
-                        .pathMatchers("user-service/api/v1/**").permitAll()
+                        .pathMatchers("/user-service/api/v1/**").permitAll()
                         .pathMatchers("/hotel-management/api/v1/**").permitAll()
                         .anyExchange()
                         .authenticated())
